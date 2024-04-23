@@ -22,7 +22,7 @@ public class LoggedTester {
 
     @BeforeClass
     void initiate_driver() {
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\abstr\\Documents\\FGCU\\Spring2024\\Testing\\Drivers\\ChromeDriver\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "/Users/bcaserto/Desktop/drivers_new/chrome_driver/chromedriver");
         driver = new ChromeDriver();
 
         driver.get(URL);
