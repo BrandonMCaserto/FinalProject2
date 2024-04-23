@@ -174,7 +174,7 @@ public class GuestTester {
 
 
     //close web browser
-    @Test(priority = 50)
+    @Test(priority = 6)
     void close_driver() {
         driver.quit();
     }

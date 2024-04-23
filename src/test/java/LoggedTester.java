@@ -32,7 +32,7 @@ public class LoggedTester {
         mainWindow = driver.getWindowHandle();
     }
 
-    @Test(priority = 6)
+    @Test(priority = 7)
     void login_test() throws InterruptedException {
         //go to log in link
         driver.findElement(By.id("mob_user_link")).click();
@@ -49,7 +49,7 @@ public class LoggedTester {
     }
 
 
-    @Test(priority = 7)
+    @Test(priority = 8)
     void open_article() throws InterruptedException {
         driver.get("https://www.theregister.com/");
         List<WebElement> links = driver.findElements(By.tagName("a"));
@@ -88,7 +88,7 @@ public class LoggedTester {
         js.executeScript("window.scrollBy(0,-3000)", "");
     }
 
-    @Test(priority = 8)
+    @Test(priority = 9)
     void comment_testing() throws InterruptedException {
         String comments = driver.findElement(By.className("comment_count")).getAttribute("href");
         driver.get(comments);
@@ -114,7 +114,7 @@ public class LoggedTester {
         Thread.sleep(2000);
     }
 
-    @Test(priority = 9)
+    @Test(priority = 10)
     void account_test() throws InterruptedException {
         //go to log in link
         driver.get(URL);
@@ -189,5 +189,10 @@ public class LoggedTester {
         Assert.assertEquals(deleteHeaderText,testString);
 
         Thread.sleep(1000);
+    }
+
+    @Test(priority = 11)
+    void close_driver() {
+        driver.quit();
     }
 }
