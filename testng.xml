@@ -5,12 +5,21 @@
         <classes>
             <class name="GuestTester">
                 <methods>
-
+                    <include name="initiate_driver"></include>
+                    <include name="open_headline"></include>
+                    <include name="inspect_author"></include>
+                    <include name="inspect_commenter"></include>
+                    <include name="search_test"></include>
+                    <include name="close_driver"></include>
                 </methods>
             </class>
             <class name="LoggedTester">
                 <methods>
-
+                    <include name="initiate_driver"></include>
+                    <include name="login_test"></include>
+                    <include name="open_article"></include>
+                    <include name="comment_testing"></include>
+                    <include name="account_test"></include>
                 </methods>
             </class>
         </classes>
